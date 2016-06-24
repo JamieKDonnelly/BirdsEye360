@@ -5,9 +5,9 @@
 	<title>BirdsEye360</title>
 	<meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
-    <meta name="decription" content="" />
+    <meta name="decription" content="I'm Jamie K Donnelly, a front end web developer. This is my website" />
     <meta name="theme-color" content="#1a1a1a" />
-    <meta property="og:image" content="">
+    <meta property="og:image" content="http://www.jamiekdonnelly.co.uk/images/ogimage.jpg">
 	<link rel="shortcut icon" type="image/png" href="/favicon.png">
 	<!-- STYLES -->
 	<link rel="stylesheet" href="dist/app.min.css">
@@ -75,6 +75,25 @@
 					</ul>
 				</nav>
 			</section>
+
+			<!-- <section class="fullWidth portfolioExtra">
+				<div class="row">
+					<div class="small-7 small-centered medium-8 large-10 columns">
+						<div class="row">
+							<div class="small-12 medium-6 columns">
+								<a href="http://codepen.io/JamieKDonnelly/" target="_blank" class="extraItem">
+									<img src="images/websites/codePen.jpg" alt="Codepen"/>
+								</a>
+							</div>
+							<div class="small-12 medium-6 columns">
+								<a href="https://github.com/JamieKDonnelly" target="_blank" class="extraItem">
+									<img src="images/websites/gitHub.jpg" alt="Codepen"/>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section> -->
 
 			<footer class="footerWrap fullWidth">
 				<div class="row">
