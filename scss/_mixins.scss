@@ -1,0 +1,70 @@
+@function calculateRem($size) {
+  $remSize: $size / 16px;
+  @return $remSize * 1rem;
+}
+
+@mixin font-size($size) {
+  font-size: $size;
+  font-size: calculateRem($size);
+}
+
+@mixin line-height($heightValue: 12 ){
+	line-height: $heightValue + px; //fallback for old browsers
+	line-height: (0.125 * $heightValue) + rem;
+}
+
+@mixin single-transition($property:all, $speed:150ms, $ease:ease, $delay: 0s){
+    -webkit-transition: $property $speed $ease $delay;
+    transition: $property $speed $ease $delay;
+}
+
+@mixin transform($property){
+    -webkit-transform: $property;
+    transform: $property;
+}
+
+@mixin perspective($value, $origin){
+    -webkit-perspective: $value;
+    perspective: $value;
+    -webkit-perspective-origin: $origin;
+    perspective-origin: $origin;
+}
+
+@mixin box-shadow($top, $left, $blur, $color, $inset:""){
+  -webkit-box-shadow:$top $left $blur $color #{$inset};
+  box-shadow:$top $left $blur $color #{$inset};
+}
+
+@mixin background-size($property){
+  -webkit-background-size: $property;
+  background-size: $property;
+}
+
+@mixin backgroundGradient(){
+    background: -moz-linear-gradient(-45deg,  rgba(26,26,26,0.7) 7%, rgba(26,26,26,0.7) 20%, rgba(224,142,38,0.7) 49%, rgba(62,106,155,0.7) 51%, rgba(26,26,26,0.7) 80%, rgba(26,26,26,0.7) 99%);
+    background: -webkit-gradient(linear, left top, right bottom, color-stop(7%,rgba(26,26,26,0.7)), color-stop(20%,rgba(26,26,26,0.7)), color-stop(49%,rgba(224,142,38,0.7)), color-stop(51%,rgba(62,106,155,0.7)), color-stop(80%,rgba(26,26,26,0.7)), color-stop(99%,rgba(26,26,26,0.7)));
+    background: -webkit-linear-gradient(-45deg,  rgba(26,26,26,0.7) 7%,rgba(26,26,26,0.7) 20%,rgba(224,142,38,0.7) 49%,rgba(62,106,155,0.7) 51%,rgba(26,26,26,0.7) 80%,rgba(26,26,26,0.7) 99%);
+    background: -o-linear-gradient(-45deg,  rgba(26,26,26,0.7) 7%,rgba(26,26,26,0.7) 20%,rgba(224,142,38,0.7) 49%,rgba(62,106,155,0.7) 51%,rgba(26,26,26,0.7) 80%,rgba(26,26,26,0.7) 99%);
+    background: -ms-linear-gradient(-45deg,  rgba(26,26,26,0.7) 7%,rgba(26,26,26,0.7) 20%,rgba(224,142,38,0.7) 49%,rgba(62,106,155,0.7) 51%,rgba(26,26,26,0.7) 80%,rgba(26,26,26,0.7) 99%);
+    background: linear-gradient(-45deg,  rgba(26,26,26,0.7) 7%,rgba(26,26,26,0.7) 20%,rgba(224,142,38,0.7) 49%,rgba(62,106,155,0.7) 51%,rgba(26,26,26,0.7) 80%,rgba(26,26,26,0.7) 99%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b31a1a1a', endColorstr='#b31a1a1a',GradientType=1 );
+}
+
+@mixin buttonGradient(){
+    background: rgb(224,142,38);
+    background: -moz-linear-gradient(45deg,  rgba(224,142,38,1) 0%, rgba(26,26,26,1) 44%, rgba(26,26,26,1) 56%, rgba(62,106,155,1) 100%);
+    background: -webkit-gradient(linear, left bottom, right top, color-stop(0%,rgba(224,142,38,1)), color-stop(44%,rgba(26,26,26,1)), color-stop(56%,rgba(26,26,26,1)), color-stop(100%,rgba(62,106,155,1)));
+    background: -webkit-linear-gradient(45deg,  rgba(224,142,38,1) 0%,rgba(26,26,26,1) 44%,rgba(26,26,26,1) 56%,rgba(62,106,155,1) 100%);
+    background: -o-linear-gradient(45deg,  rgba(224,142,38,1) 0%,rgba(26,26,26,1) 44%,rgba(26,26,26,1) 56%,rgba(62,106,155,1) 100%);
+    background: -ms-linear-gradient(45deg,  rgba(224,142,38,1) 0%,rgba(26,26,26,1) 44%,rgba(26,26,26,1) 56%,rgba(62,106,155,1) 100%);
+    background: linear-gradient(45deg,  rgba(224,142,38,1) 0%,rgba(26,26,26,1) 44%,rgba(26,26,26,1) 56%,rgba(62,106,155,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e08e26', endColorstr='#3e6a9b',GradientType=1 );
+}
+
+@mixin noBlueHightlight(){
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}

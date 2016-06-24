@@ -1,0 +1,6 @@
+ErrorDocument 404 /404.php
+
+# Apache config
+<FilesMatch ".(eot|ttf|otf|woff|svg)">
+	Header set Access-Control-Allow-Origin "*"
+</FilesMatch>
